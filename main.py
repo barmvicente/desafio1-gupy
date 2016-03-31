@@ -59,7 +59,7 @@ def index(maintuple, array_of_tuples):
     retornará um HTTP 400"""
 
     try:
-        maintuple = map(int, maintuple.split())
+        maintuple = map(int, maintuple[1:-1].split(','))
         array_of_tuples = array_of_tuples[1:-1].split('),')
         arr = []
         for i in range(len(array_of_tuples)):
